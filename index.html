@@ -59,13 +59,10 @@
                             <input type="text" id="a5" class="form-control slideInRight animated" placeholder="Assessment 5" maxlength="2" required="true"><br>
                         </form>
 
-                        <!-- THsi adds the hinge feature to the page
+                        <!-- This adds the hinge feature to the page -->
                         <script type="text/javascript">
-                            $('.form-control').click(function(){
-                                clicked=$('.form-control').attr('id');
-                                $(clicked).className='form-control hinge animated';
-                            });
-                        </script> -->
+
+                        </script>
                     </div>
                     <div class="col-2-lg"></div>
                 </div>
@@ -120,9 +117,8 @@
                         <div class="col-12-lg grades" id="grade">
                             <p id="grades" style="font-family: cursive;">YOUR DETAILS WILL APPEAR HERE</p><br><br>
                             <button class="gbtn btn btn-info" id="gbtn" >Get Grades</button>
-                            <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">START AGAIN</button>
+                            <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Check Another</button>
                             <!-- A new button pops up when clicked -->
-
                         </div>
                     </div>
                 </div>
@@ -133,6 +129,11 @@
         </footer>
     </div></div>
     <script>
+        $('.form-control').on('change',function(){
+            // clicked='#' + this.id;
+            document.getElementById(this.id).className='form-control hinge animated';
+        });
+
         $('#gbtn').click(function(){
             var a1,a2,a3,a4,a5,p1,p2,p3,p4,p5,p6,p7,p8,c1,c2,i1,ta=0,tp=0,tc=0,ti=0,t=0,g="N/A";
             a1=parseInt($('#a1').val());a2=parseInt($('#a2').val());a3=parseInt($('#a3').val());a4=parseInt($('#a4').val());a5=parseInt($('#a5').val());
@@ -151,9 +152,10 @@
             else if (t<=69 && t>=60) {g='C';}
             else if (t<=59 && t>=50) {g='D';}
             else if (t<=49 && t>=40) {g='E';}
-            else {g='FAIL';}
-            $('#grades').html("<table class='table table-striped table-inverse'><thead><tr><th></th><th>Exams</th><th>Marks</th><th>Normalized</th></tr></thead><tbody><tr><th scope='row'>1</th><td>Assessments</td><td>"+a+"</td><td>"+ta.toFixed(1)+"</td></tr><tr><th scope='row'>2</th><td>Practice Problems</td><td>"+p+"</td><td>"+tp.toFixed(1)+"</td></tr><tr><th scope='row'>3</th><td>Challenging Task</td><td>"+c+"</td><td>"+tc+"</td></tr><th scope='row'>4</th><td>Inlab</td><td>"+i+"</td><td>"+ti.toFixed(1)+"</td></tr><center><tr><th scope='row'></th><td colspan='2'>Total Score</td><td>"+t.toFixed(1)+"</td></tr><tr><th scope='row'></th><td colspan='2'>Your Grades</td><td>"+g+"</td></tr></center></tbody></table></tbody></table>");
-            $('#reset').classList.remove("hide");
+            else if(t<39) {g='FAIL';}
+            $('#grades').html("<table class='table table-striped table-inverse'><thead><tr><th></th><th>Exams</th><th>Marks</th><th>Normalized</th></tr></thead><tbody><tr><th scope='row'>1</th><td>Assessments</td><td>"+a+"/250</td><td>"+ta.toFixed(1)+"/40</td></tr><tr><th scope='row'>2</th><td>Practice Problems</td><td>"+p+"/400</td><td>"+tp.toFixed(1)+"/30</td></tr><tr><th scope='row'>3</th><td>Challenging Task</td><td>"+c+"/100</td><td>"+tc+"/20</td></tr><th scope='row'>4</th><td>Inlab</td><td>"+i+"/100</td><td>"+ti.toFixed(1)+"</td></tr><center><tr><th scope='row'></th><td colspan='2'>Total Score</td><td>"+t.toFixed(1)+"/10</td></tr><tr><th scope='row'></th><td colspan='2'>Your Grades</td><td>"+g+"</td></tr></center></tbody></table></tbody></table>");
+            document.getElementById('reset').classList.remove("hide");
+            document.getElementById("gbtn").className="gbtn hide";
         });
     </script>
 </body>
