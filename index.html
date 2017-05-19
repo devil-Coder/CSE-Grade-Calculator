@@ -7,156 +7,29 @@
     <link rel="stylesheet" type="text/css" href="animate.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        #head1{
-            padding:2% 5% 4% 5%;
-            width: 100%;
-            background-color: #36648B;
-            color: white;
-            font-family: 'Shadows Into Light', cursive;
-            font-weight: bold;
-            font-size: x-large;
-            text-align: center;
-            position: relative;
-        }
-    </style>
 </head>
-<body style="padding: 0% 0% 1% 0%; background-color: #DCDCDC">
-<div class="main-container">
-    <div class="row">
-        <div class="col-4-lg header-container">
-            <table class="table" width="100%" height="15%" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#36648B;" >
-                <tbody>
-                    <tr>
-                        <td class="slideInDown animated" width="100%" align="left">
-                            <img src="https://vtop.vit.ac.in/student/images/vit_logo6.jpg" height="100%" width="100%">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center">
-                            <br>
-                            <font size="5" color="#FFFFFF" face="Comic Sans MS">
-                            <b>CSE Grade Calculator</b><br>
-                            </font>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-4-lg body-container">
-            <center>
-            <h1 id="head1">Enter ur marks in Assessments</h1>
-            <div class="ass-container">
-                <div class="row">
-                    <div class="col-2-lg"></div>
-                    <div class="col-8-lg">
-                        <form action="" class="input-group">
-                    <!--I need to add the hinge feature -->
-                            <input type="text" id="a1" class="form-control slideInRight animated" placeholder="Assessment 1" maxlength="2" required="true"><br>
-                            <input type="text" id="a2" class="form-control slideInLeft animated" placeholder="Assessment 2" maxlength="2" required="true"><br>
-                            <input type="text" id="a3" class="form-control slideInRight animated" placeholder="Assessment 3" maxlength="2" required="true"><br>
-                            <input type="text" id="a4" class="form-control slideInLeft animated" placeholder="Assessment 4" maxlength="2" required="true"><br>
-                            <input type="text" id="a5" class="form-control slideInRight animated" placeholder="Assessment 5" maxlength="2" required="true"><br>
-                        </form>
-
-                        <!-- This adds the hinge feature to the page -->
-                        <script type="text/javascript">
-
-                        </script>
-                    </div>
-                    <div class="col-2-lg"></div>
-                </div>
-            </div><hr>
-            <h1 id="head1">Enter ur marks in Practice Problems</h1>
-            <div class="pps-container">
-                <div class="row">
-                    <div class="col-2-lg"></div>
-                    <div class="col-8-lg" style="padding: 0 20% 0 20%;">
-                        <form class="input-group">
-                            <input type="text" id="p1" class="form-control" placeholder="PPS 1" maxlength="2" required="true">
-                            <input type="text" id="p2" class="form-control" placeholder="PPS 2" maxlength="2" required="true"><br>
-                            <input type="text" id="p3" class="form-control" placeholder="PPS 3" maxlength="2" required="true">
-                            <input type="text" id="p4" class="form-control" placeholder="PPS 4" maxlength="2" required="true"><br>
-                            <input type="text" id="p5" class="form-control" placeholder="PPS 5" maxlength="2" required="true">
-                            <input type="text" id="p6" class="form-control" placeholder="PPS 6" maxlength="2" required="true"><br>
-                            <input type="text" id="p7" class="form-control" placeholder="PPS 7" maxlength="2" required="true">
-                            <input type="text" id="p8" class="form-control" placeholder="PPS 8" maxlength="2" required="true">
-                        </form>
-                    </div>
-                    <div class="col-2-lg"></div>
-                </div>
-            </div><hr>
-            <h1 id="head1">Enter ur marks in Challenging Task</h1>
-            <div class="ct-container">
-                <div class="row">
-                    <div class="col-12-lg">
-                        <form action="" class="input-group">
-                            <input type="text" id="c1" class="form-control" placeholder="CT 1" maxlength="2" required="true"><br>
-                            <input type="text" id="c2" class="form-control" placeholder="CT 2" maxlength="2" required="true">
-                        </form>
-                    </div>
-                </div>
-            </div><hr>
-            <h1 id="head1">Enter ur marks in Inlab</h1>
-            <div class="inlab-container">
-                <div class="row">
-                    <div class="col-12-lg">
-                        <form action="" class="input-group">
-                            <input type="text" id="i1" class="form-control" placeholder="Inlab marks out of 100" maxlength="3" required="true">
-                        </form>
-                    </div>
-                </div>
+<body style="padding: 20% 0% 20% 0%;">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-block card-block-outline-info">
+                <h3 class="card-title"><strong>I want to Enter all marks by myself !</strong></h3>
+                <p class="card-text">Here you will be asked to enter the marks of Each Assessment,Practice Problems,Challenging Tasks and sum of all Inlabs.Then your grades will be displayed.</p>
+                <a href="fullversion.html" class="btn btn-primary">Continue</a>
+              </div>
             </div>
-            <hr><br>
-            </center>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-block">
+                <h3 class="card-title"><strong>I have the Sum, I want 2 know Grade!</strong></h3>
+                <p class="card-text">Here you will be asked to Enter the sum of marks obtained in Assessments, Practice Problems, Challenging tasks and Inlabs.</p>
+                <a href="lite.html" class="btn btn-primary">Continue</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-4-lg display-container">
-            <center>
-                <div class="grade-container">
-                    <div class="row">
-                        <div class="col-12-lg grades" id="grade">
-                            <p id="grades" style="font-family: cursive;">YOUR DETAILS WILL APPEAR HERE</p><br><br>
-                            <button class="gbtn btn btn-info" id="gbtn" >Get Grades</button>
-                            <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Check Another</button>
-                            <!-- A new button pops up when clicked -->
-                        </div>
-                    </div>
-                </div>
-            </center>
-        </div><br><hr>
-        <footer class="footer"><center>
-            <p style="font-family: cursive;">Handcrafted in VIT,Vellore by <strong>Raj Chandra : </strong><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p></center>
-        </footer>
-    </div></div>
-    <script>
-        // $('.form-control').on('change',function(){
-        //     // clicked='#' + this.id;
-        //     document.getElementById(this.id).className='form-control hinge animated';
-        // });
-
-        $('#gbtn').click(function(){
-            var a1,a2,a3,a4,a5,p1,p2,p3,p4,p5,p6,p7,p8,c1,c2,i1,ta=0,tp=0,tc=0,ti=0,t=0,g="N/A";
-            a1=parseInt($('#a1').val());a2=parseInt($('#a2').val());a3=parseInt($('#a3').val());a4=parseInt($('#a4').val());a5=parseInt($('#a5').val());
-            p1=parseInt($('#p1').val());p2=parseInt($('#p2').val());p3=parseInt($('#p3').val());p4=parseInt($('#p4').val());p5=parseInt($('#p5').val());p6=parseInt($('#p6').val());p7=parseInt($('#p7').val());p8=parseInt($('#p8').val());
-            c1=parseInt($('#c1').val());c2=parseInt($('#c2').val());
-            i1=parseInt($('#i1').val());
-            a=(a1+a2+a3+a4+a5);p=(p1+p2+p3+p4+p5+p6+p7+p8);c=(c1+c2);i=i1;
-            ta=(((a1+a2+a3+a4+a5)/250))*40;
-            tp=((p1+p2+p3+p4+p5+p6+p7+p8)/400)*30;
-            tc=((c1+c2)/100)*20;
-            ti=((i1)/100)*10;
-            t=(ta+tp+tc+ti);
-            if (t>=90) {g='S';}
-            else if (t<=89 && t>=80) {g='A';}
-            else if (t<=79 && t>=70) {g='B';}
-            else if (t<=69 && t>=60) {g='C';}
-            else if (t<=59 && t>=50) {g='D';}
-            else if (t<=49 && t>=40) {g='E';}
-            else if(t<39) {g='FAIL';}
-            $('#grades').html("<table class='table table-striped table-inverse'><thead><tr><th></th><th>Exams</th><th>Marks</th><th>Normalized</th></tr></thead><tbody><tr><th scope='row'>1</th><td>Assessments</td><td>"+a+"/250</td><td>"+ta.toFixed(1)+"/40</td></tr><tr><th scope='row'>2</th><td>Practice Problems</td><td>"+p+"/400</td><td>"+tp.toFixed(1)+"/30</td></tr><tr><th scope='row'>3</th><td>Challenging Task</td><td>"+c+"/100</td><td>"+tc+"/20</td></tr><th scope='row'>4</th><td>Inlab</td><td>"+i+"/100</td><td>"+ti.toFixed(1)+"</td></tr><center><tr><th scope='row'></th><td colspan='2'>Total Score</td><td>"+t.toFixed(1)+"/10</td></tr><tr><th scope='row'></th><td colspan='2'>Your Grades</td><td>"+g+"</td></tr></center></tbody></table></tbody></table>");
-            document.getElementById('reset').classList.remove("hide");
-            document.getElementById("gbtn").className="gbtn hide";
-        });
-    </script>
+    </div>
 </body>
 </html>
