@@ -88,6 +88,18 @@
         //     document.getElementById(this.id).className='form-control hinge animated';NMlbCqo9
         // });
 
+        $('.form-control').on('keyup',function(){
+            marks=document.getElementById(this.id).value;
+            if((marks>100 || marks<0) && this.id==='a')
+                alert('Your marks should b b/w 0 and 250 !');
+            else if((marks>400 || marks<0) && this.id==='p')
+                alert('Your marks Should b b/w 0 and 400');
+            else if((marks>100 || marks<0) && this.id==='c')
+                alert('Your marks Should b b/w 0 and 100');
+            else if((marks>100 || marks<0) && this.id==='i')
+                alert('Your marks Should b b/w 0 and 100');
+        });
+
         $('#gbtn').click(function(){
             var a,p,c,i,ta=0,tp=0,tc=0,ti=0,t=0,g="N/A";
             a=parseInt($('#a').val());

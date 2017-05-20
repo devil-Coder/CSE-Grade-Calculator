@@ -57,13 +57,12 @@
                     <div class="col-8-lg">
                         <form action="" class="input-group">
                     <!--I need to add the hinge feature -->
-                            <input type="text" id="a1" class="form-control slideInRight animated" placeholder="Assessment 1" maxlength="2" required="true"><br>
-                            <input type="text" id="a2" class="form-control slideInLeft animated" placeholder="Assessment 2" maxlength="2" required="true"><br>
-                            <input type="text" id="a3" class="form-control slideInRight animated" placeholder="Assessment 3" maxlength="2" required="true"><br>
-                            <input type="text" id="a4" class="form-control slideInLeft animated" placeholder="Assessment 4" maxlength="2" required="true"><br>
-                            <input type="text" id="a5" class="form-control slideInRight animated" placeholder="Assessment 5" maxlength="2" required="true"><br>
+                            <input type="text" id="a1" class="form-control slideInRight animated" placeholder="Assessment 1" maxlength="4" required="true"><br>
+                            <input type="text" id="a2" class="form-control slideInLeft animated" placeholder="Assessment 2" maxlength="4" required="true"><br>
+                            <input type="text" id="a3" class="form-control slideInRight animated" placeholder="Assessment 3" maxlength="4" required="true"><br>
+                            <input type="text" id="a4" class="form-control slideInLeft animated" placeholder="Assessment 4" maxlength="4" required="true"><br>
+                            <input type="text" id="a5" class="form-control slideInRight animated" placeholder="Assessment 5" maxlength="4" required="true"><br>
                         </form>
-
                         <!-- This adds the hinge feature to the page -->
                         <script type="text/javascript">
 
@@ -78,14 +77,14 @@
                     <div class="col-2-lg"></div>
                     <div class="col-8-lg" style="padding: 0 20% 0 20%;">
                         <form class="input-group">
-                            <input type="text" id="p1" class="form-control" placeholder="PPS 1" maxlength="2" required="true">
-                            <input type="text" id="p2" class="form-control" placeholder="PPS 2" maxlength="2" required="true"><br>
-                            <input type="text" id="p3" class="form-control" placeholder="PPS 3" maxlength="2" required="true">
-                            <input type="text" id="p4" class="form-control" placeholder="PPS 4" maxlength="2" required="true"><br>
-                            <input type="text" id="p5" class="form-control" placeholder="PPS 5" maxlength="2" required="true">
-                            <input type="text" id="p6" class="form-control" placeholder="PPS 6" maxlength="2" required="true"><br>
-                            <input type="text" id="p7" class="form-control" placeholder="PPS 7" maxlength="2" required="true">
-                            <input type="text" id="p8" class="form-control" placeholder="PPS 8" maxlength="2" required="true">
+                            <input type="text" id="p1" class="form-control" placeholder="PPS 1" maxlength="4" required="true">
+                            <input type="text" id="p2" class="form-control" placeholder="PPS 2" maxlength="4" required="true"><br>
+                            <input type="text" id="p3" class="form-control" placeholder="PPS 3" maxlength="4" required="true">
+                            <input type="text" id="p4" class="form-control" placeholder="PPS 4" maxlength="4" required="true"><br>
+                            <input type="text" id="p5" class="form-control" placeholder="PPS 5" maxlength="4" required="true">
+                            <input type="text" id="p6" class="form-control" placeholder="PPS 6" maxlength="4" required="true"><br>
+                            <input type="text" id="p7" class="form-control" placeholder="PPS 7" maxlength="4" required="true">
+                            <input type="text" id="p8" class="form-control" placeholder="PPS 8" maxlength="4" required="true">
                         </form>
                     </div>
                     <div class="col-2-lg"></div>
@@ -96,8 +95,8 @@
                 <div class="row">
                     <div class="col-12-lg">
                         <form action="" class="input-group">
-                            <input type="text" id="c1" class="form-control" placeholder="CT 1" maxlength="2" required="true"><br>
-                            <input type="text" id="c2" class="form-control" placeholder="CT 2" maxlength="2" required="true">
+                            <input type="text" id="c1" class="form-control" placeholder="CT 1" maxlength="4" required="true"><br>
+                            <input type="text" id="c2" class="form-control" placeholder="CT 2" maxlength="4" required="true">
                         </form>
                     </div>
                 </div>
@@ -138,6 +137,15 @@
         //     // clicked='#' + this.id;
         //     document.getElementById(this.id).className='form-control hinge animated';NMlbCqo9
         // });
+
+        $('.form-control').on('keyup',function(){
+            marks=document.getElementById(this.id).value;
+            if((marks>50 || marks<0) && this.id!=='i1'){
+                alert('Your marks should b b/w 0 and 50 !');
+            }
+            else if((marks>100 || marks<0) && this.id==='i1')
+                alert('Your marks Should b b/w 0 and 100');
+        });
 
         $('#gbtn').click(function(){
             var a1,a2,a3,a4,a5,p1,p2,p3,p4,p5,p6,p7,p8,c1,c2,i1,ta=0,tp=0,tc=0,ti=0,t=0,g="N/A";
