@@ -8,7 +8,21 @@
     <script type="text/javascript" src="jquery.min.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        #header{
+            padding: 3% 0 3% 0;
+            margin-bottom: 5%;
+            width: 100%;
+            background-color: #36648B;
+            color: white;
+            font-family: 'Shadows Into Light', cursive;
+            font-weight: bold;
+            font-size: x-large;
+            text-align: center;
+            position: relative;
+        }
         #head1{
+            padding: 3% 0 3% 0;
+            margin-bottom: 5%;
             width: 100%;
             background-color: #36648B;
             color: white;
@@ -31,65 +45,66 @@
 </script>
 </head>
 <body style="padding: 0% 0% 1% 0%; background-color: #DCDCDC">
+<center>
 <div class="main-container">
-    <div class="row">
-        <div class="col-4-lg header-container">
-            <table class="table" width="100%" height="15%" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#36648B;" >
-                <tbody>
-                    <tr>
-                        <td align="center">
-                            <br>
-                            <font size="5" color="#FFFFFF" face="Comic Sans MS">
-                            <b>CSE Grade Calculator</b><br>
-                            </font>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-4-lg body-container">
-            <center>
-            <h1 id="head1">Enter Your Total marks</h1>
-            <div class="pps-container">
-                <div class="row">
-                    <div class="col-2-lg"></div>
-                    <div class="col-8-lg" style="padding: 0 20% 0 20%;">
-                        <form class="input-group">
-                            <input type="text" id="a" class="form-control" placeholder="Marks in Assessments" maxlength="3" required="true">
-                            <input type="text" id="p" class="form-control" placeholder="Marks in Practice Problems" maxlength="3" required="true"><br>
-                            <input type="text" id="c" class="form-control" placeholder="Marks in Challenging Tasks" maxlength="3" required="true">
-                            <input type="text" id="i" class="form-control" placeholder="Marks in Inlabs" maxlength="3" required="true"><br>
-                        </form>
-                    </div>
-                    <div class="col-2-lg"></div>
+    <div class="header-container">
+         <header id="header"> CSE Grade Calculator</header>
+    </div>
+    <div class="col-4-lg body-container">
+        <h1 id="head1">Enter Your Total marks</h1>
+        <div class="pp-container">
+            <div class="row">
+                <div class="col-2-lg"></div>
+                <div class="col-8-lg" style="padding: 0 20% 0 20%;">
+                    <form class="input-group">
+                        <input type="text" id="a" class="form-control" placeholder="Marks in Assessments" maxlength="3" required>
+                        <input type="text" id="p" class="form-control" placeholder="Marks in Practice Problems" maxlength="3" required><br>
+                        <input type="text" id="c" class="form-control" placeholder="Marks in Challenging Tasks" maxlength="3" required>
+                        <input type="text" id="i" class="form-control" placeholder="Marks in Inlabs" maxlength="3" required><br>
+                    </form>
                 </div>
-            </div><hr>
-        <div class="col-4-lg display-container">
-            <center>
-                <div class="grade-container">
-                    <div class="row">
-                        <div class="col-12-lg grades" id="grade">
-                            <p id="grades" style="font-family: cursive;">Your details will appear here.</p><br><br>
-                            <button class="gbtn btn btn-info" id="gbtn" >Get Grades</button>
-                            <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Check Another</button>
-                            <!-- A new button pops up when clicked -->
-                        </div>
-                    </div>
+                <div class="col-2-lg"></div>
+            </div>
+        </div><hr>
+    </div>
+     <div class="col-4-lg display-container">
+        <div class="grade-container">
+            <div class="row">
+                <div class="col-12-lg grades" id="grade">
+                    <p id="grades" style="font-family: cursive;">Fill the information and come back.</p><br><br>
+                    <button class="gbtn btn btn-info" type="submit" id="gbtn" disabled="disabled" >Get Grades</button>
+                    <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Check Another</button>
+                    <!-- A new button pops up when clicked -->
                 </div>
             </div>
-        <br><hr>
-        <footer class="footer"><center>
-            <p style="font-family: cursive;">Handcrafted in VIT,Vellore by <strong>Raj Chandra : </strong><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p></center>
-        </footer>
+        </div><br><hr>
+    </div>
+    <footer class="footer">
+        <p style="font-family: cursive;">Handcrafted in VIT,Vellore by <strong>Raj Chandra : </strong><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
+    </footer>
         </center>
     <script>
         // $('.form-control').on('change',function(){
         //     // clicked='#' + this.id;
         //     document.getElementById(this.id).className='form-control hinge animated';NMlbCqo9
         // });
-
+        $('form > input').on('keyup',function(){
+            var empty=false;
+            $('form > input').each(function(){
+                if($(this).val() == '')
+                    empty=true;
+            if(empty)
+                $('#gbtn').attr('disabled','disabled');
+            else
+                $('#gbtn').removeAttr('disabled');
+            });
+        });
         $('.form-control').on('keyup',function(){
             marks=document.getElementById(this.id).value;
+            var re=/^[0-9].+$/;
+            if (!re.test(marks)){
+                alert("Invalid Input.\nPlease enter only digits.");
+            }
             if((marks>250 || marks<0) && this.id==='a')
                 alert('Your marks should b b/w 0 and 250 !');
             else if((marks>400 || marks<0) && this.id==='p')
@@ -99,12 +114,6 @@
             else if((marks>100 || marks<0) && this.id==='i')
                 alert('Your marks Should b b/w 0 and 100');
         });
-        // if($('.form-control').val() === NaN){
-        //     $('#gbtn').prop("disabled",true);
-        // }
-        // else{
-        //     $('#gbtn').prop("disabled",false);
-        // }
 
         $('#gbtn').click(function(){
             var a,p,c,i,ta=0,tp=0,tc=0,ti=0,t=0,g="N/A";
@@ -127,6 +136,7 @@
             $('#grades').html("<table class='table table-striped table-inverse'><thead><tr><th></th><th>Exams</th><th>Marks</th><th>Normalized</th></tr></thead><tbody><tr><th scope='row'>1</th><td>Assessments</td><td>"+a+"/250</td><td>"+ta.toFixed(1)+"/40</td></tr><tr><th scope='row'>2</th><td>Practice Problems</td><td>"+p+"/400</td><td>"+tp.toFixed(1)+"/30</td></tr><tr><th scope='row'>3</th><td>Challenging Task</td><td>"+c+"/100</td><td>"+tc.toFixed(1)+"/20</td></tr><th scope='row'>4</th><td>Inlab</td><td>"+i+"/100</td><td>"+ti.toFixed(1)+"/10</td></tr><center><tr><th scope='row'></th><td colspan='2'>Total Score</td><td>"+t.toFixed(1)+"</td></tr><tr><th scope='row'></th><td colspan='2'>Your Grades</td><td>"+g+"</td></tr></center></tbody></table></tbody></table>");
             document.getElementById('reset').classList.remove("hide");
             document.getElementById("gbtn").className="gbtn hide";
+            $('.body-container').hide(2000);
         });
     </script>
 </body>
