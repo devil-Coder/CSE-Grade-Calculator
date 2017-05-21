@@ -101,8 +101,9 @@
         });
         $('.form-control').on('keyup',function(){
             marks=document.getElementById(this.id).value;
-            var re=/^[0-9].+$/;
-            if (!re.test(marks)){
+            if(!marks==''){
+            var re=/^\d+\.?\d{0,2}$/;
+            if (!(re.test(marks)))
                 alert("Invalid Input.\nPlease enter only digits.");
             }
             if((marks>250 || marks<0) && this.id==='a')
