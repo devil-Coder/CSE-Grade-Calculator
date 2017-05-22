@@ -3,7 +3,7 @@
 <head>
     <title>CSE | Grades</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="http://plasticosroca.com/wp-content/uploads/2016/12/instant_rockstar_r_logo_red_transparency.png">
+    <link rel="icon" type="image/png" href="https://www.iaccept.in/img/clients/skillrack_slider.jpg">
     <link rel="stylesheet" type="text/css" href="animate.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,14 +21,11 @@
             position: relative;
         }
         #head1{
-            padding: 3% 0 3% 0;
-            margin-bottom: 5%;
+            color: #000000;
             width: 100%;
-            background-color: #36648B;
-            color: white;
             font-family: 'Shadows Into Light', cursive;
             font-weight: bold;
-            font-size: x-large;
+            font-size: large;
             text-align: center;
             position: relative;
         }
@@ -71,10 +68,10 @@
         <div class="grade-container">
             <div class="row">
                 <div class="col-12-lg grades" id="grade">
-                    <p id="grades" style="font-family: cursive;">Fill the information and come back.</p><br><br>
+                    <p id="grades" style="font-family: cursive;">Please fill the informations and come back.</p><br><br>
                     <button class="gbtn btn btn-info" type="submit" id="gbtn" disabled="disabled" >Get Grades</button>
-                    <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Check Another</button>
-                    <!-- A new button pops up when clicked -->
+                    <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Check Another</button><br><br>
+                    <p style="color: red; font-family: cursive;" class="msg hide" id="msg"><strong>Note :</strong> Your marks may improve if bonus practice problem marks is added.</p>
                 </div>
             </div>
         </div><br><hr>
@@ -138,6 +135,7 @@
             document.getElementById('reset').classList.remove("hide");
             document.getElementById("gbtn").className="gbtn hide";
             $('.body-container').hide(2000);
+            document.getElementById('msg').classList.remove("hide");
         });
     </script>
 </body>
