@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="animate.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+
     <style>
         header{
             padding: 3% 0 3% 0;
@@ -14,7 +16,7 @@
             width: 100%;
             background-color: #36648B;
             color: white;
-            font-family: 'Shadows Into Light', cursive;
+            font-family: 'Acme', sans-serif;
             font-weight: bold;
             font-size: x-large;
             text-align: center;
@@ -22,7 +24,7 @@
         h1{
             color: #000000;
             width: 100%;
-            font-family: 'Shadows Into Light', cursive;
+            font-family: 'Acme', sans-serif;
             font-weight: bold;
             font-size: large;
             text-align: center;
@@ -107,20 +109,22 @@
             });
         });
         $('.form-control').on('keyup',function(){
-            marks=document.getElementById(this.id).value;
+            var marks=document.getElementById(this.id).value;
             if(!marks==''){
             var re=/^\d+\.?\d{0,2}$/;
-            if (!(re.test(marks)))
-                alert("Invalid Input.\nPlease enter only digits.");
+                if (!(re.test(marks))){
+                    alert("Invalid Input.\nPlease enter only digits.");
+                    $(this).val('');
+                }
             }
-            if((marks>250 || marks<0) && this.id==='a')
-                alert('Your marks should b b/w 0 and 250 !');
-            else if((marks>400 || marks<0) && this.id==='p')
-                alert('Your marks Should b b/w 0 and 400');
-            else if((marks>100 || marks<0) && this.id==='c')
+            if((marks>50 || marks<0) && this.id!=='i1'){
+                alert('Your marks should b b/w 0 and 50 !');
+                $(this).val('');
+            }
+            else if((marks>100 || marks<0) && this.id==='i1'){
                 alert('Your marks Should b b/w 0 and 100');
-            else if((marks>100 || marks<0) && this.id==='i')
-                alert('Your marks Should b b/w 0 and 100');
+                $(this).val('');
+            }
         });
 
         $('#gbtn').on('click',function(){
@@ -129,7 +133,7 @@
             p=parseInt($('#p').val());
             c=parseInt($('#c').val());
             i=parseInt($('#i').val());
-            ta=((a/250))*40;
+            ta=((a/250))*38.7;
             tp=((p)/400)*30;
             tc=(c/100)*20;
             ti=(i/100)*10;
