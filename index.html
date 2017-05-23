@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html><!-- NMlbCqo9 -->
 <head>
     <title>CSE | Grades</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,15 @@
             font-weight: bold;
             font-size: x-large;
             text-align: center;
-            position: relative;
+        }
+        .card-container{
+          background-color: #ffffff;
+          border:1px #FF7F00 solid;
+          border-radius: 2%;
+          padding : 10px;
+          margin-right: 2%;
+          margin-left: 2%;
+          margin-bottom: 3%;
         }
     </style>
     <script>
@@ -31,10 +39,10 @@
     </script>
 
 </head>
-<body>
+<body style="background-color:#F5F5F5">
     <header id="header">CSE Grade Calculator</header>
-    <div class="container">
-        <div class="card card-outline-success mb-3 text-center">
+    <div class="container" style="margin-bottom: 2%;">
+        <div class="card card-outline-success mb-3 text-center" style="border:1px #76EE00 solid; border-radius: 2%; background-color: #ffffff;">
             <div class="card-block">
                 <blockquote class="card-blockquote">
                   <div id="quotation" class="quoation">
@@ -43,26 +51,30 @@
                   <footer>Eleanor Roosevelt</footer>
                 </blockquote>
             </div>
-        </div>
-          <div class="col-sm-6">
+          </div>
+        </div><center>
+        <div class="cards">
+          <div class="col-sm-6 col-md-6 col-lg-5 card-container">
             <div class="card card-outline-primary mb-3 ">
               <div class="card-block card-block-outline-info">
                 <h3 class="card-title"><strong>I want to Enter all marks by myself !</strong></h3>
-                <p class="card-text">Here you will be asked to enter the marks of Each Assessment,Practice Problems,Challenging Tasks and sum of all Inlabs.Then your grades will be displayed.</p>
+                <p class="card-text">Enter the marks of each Assessment,Practice Problems,Challenging Tasks and Sum of all Inlabs =>Get Grades.</p>
                 <a href="fullVersion.html" class="btn btn-primary">Continue</a>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 ">
-            <div class="card">
-              <div class="card-block">
-                <h3 class="card-title"><strong>I have the Sum, I want 2 know Grade!</strong></h3>
-                <p class="card-text">Here you will be asked to Enter the sum of marks obtained in Assessments, Practice Problems, Challenging tasks and Inlabs , after that the grades will be displayed.</p>
-                <a href="lite.html" class="btn btn-primary">Continue</a>
+            <div class="col-sm-6 col-md-6 col-lg-5 card-container">
+              <div class="card">
+                <div class="card-block">
+                  <h3 class="card-title"><strong>I have the Sum, I want 2 know Grade!</strong></h3>
+                  <p class="card-text">Enter the sum of marks obtained in Assessments, Practice Problems, Challenging tasks and Inlabs =>Get Grades.</p>
+                  <a href="lite.html" class="btn btn-primary">Continue</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-    <br><br>
+        </div></center>
+      </div>
+    </div>
 </body>
 </html>

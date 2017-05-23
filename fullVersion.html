@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSE | Grades</title>
+    <title>CSE | vFull</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="https://www.iaccept.in/img/clients/skillrack_slider.jpg">
     <link rel="stylesheet" type="text/css" href="animate.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
-    #header{
-        padding: 3% 0 3% 0;
-            margin-bottom: 5%;
+        header{
+            padding: 3% 0 3% 0;
+            margin-bottom: 4%;
             width: 100%;
             background-color: #36648B;
             color: white;
@@ -18,8 +18,7 @@
             font-weight: bold;
             font-size: x-large;
             text-align: center;
-            position: relative;
-    }
+        }
         h1{
             color: #000000;
             width: 100%;
@@ -28,6 +27,15 @@
             font-size: large;
             text-align: center;
             position: relative;
+        }
+        .card-container{
+            background-color: #ffffff;
+            border:1px #FF7F00 solid;
+            border-radius: 2%;
+            padding : 5% 5% 5% 5%;
+            margin-right: 2%;
+            margin-left: 2%;
+            margin-bottom: 5%;
         }
     </style>
     <script>
@@ -40,94 +48,88 @@
       ga('send', 'pageview');
     </script>
 </head>
-<body style="padding: 0% 0% 1% 0%; background-color: #DCDCDC">
+<body style="padding: 0% 0% 1% 0%; background-color: #F5F5F5">
 <center>
 <div class="main-container">
     <div class="header-container">
          <header id="header"> CSE Grade Calculator</header>
     </div>
-    <div class="col-4-lg body-container">
-        <center>
-        <h1 id="head1" class="slideInLeft animated">Enter Your marks in Assessments</h1>
-        <div class="ass-container">
-            <div class="row">
-                <div class="col-2-lg"></div>
-                <div class="col-8-lg">
-                    <form action="" class="input-group">
-                <!--I need to add the hinge feature -->
-                        <input type="text" id="a1" class="form-control slideInRight animated" placeholder="Assessment 1" maxlength="5" required="true"><br>
-                        <input type="text" id="a2" class="form-control slideInLeft animated" placeholder="Assessment 2" maxlength="5" required="true"><br>
-                        <input type="text" id="a3" class="form-control slideInRight animated" placeholder="Assessment 3" maxlength="5" required="true"><br>
-                        <input type="text" id="a4" class="form-control slideInLeft animated" placeholder="Assessment 4" maxlength="5" required="true"><br>
-                        <input type="text" id="a5" class="form-control slideInRight animated" placeholder="Assessment 5" maxlength="5" required="true"><br>
-                    </form>
-                    <!-- This adds the hinge feature to the page -->
-                    <script type="text/javascript">
-
-                    </script>
-                </div>
-                <div class="col-2-lg"></div>
-            </div><hr>
+    <div class="col-10-lg body-container">
+    <div class="cards">
+      <div class="col-sm-10 col-md-10 col-lg-10 card-container">
+        <div class="card card-outline-primary mb-3 ">
+          <div class="card-block card-block-outline-info">
+            <h1 class="card-title slideInLeft animated"><strong>Enter Your marks in Assessments</strong></h1>
+            <form action="" class="input-group">
+                <input type="text" id="a1" class="form-control slideInRight animated" placeholder="Assessment 1" maxlength="5" required="true"><br>
+                <input type="text" id="a2" class="form-control slideInLeft animated" placeholder="Assessment 2" maxlength="5" required="true"><br>
+                <input type="text" id="a3" class="form-control slideInRight animated" placeholder="Assessment 3" maxlength="5" required="true"><br>
+                <input type="text" id="a4" class="form-control slideInLeft animated" placeholder="Assessment 4" maxlength="5" required="true"><br>
+                <input type="text" id="a5" class="form-control slideInRight animated" placeholder="Assessment 5" maxlength="5" required="true"><br>
+            </form>
+          </div>
         </div>
-            <h1 id="head1" class="slideInRight animated">Enter Your marks in Practice Problems</h1>
-            <div class="pps-container">
-                <div class="row">
-                    <div class="col-2-lg"></div>
-                    <div class="col-8-lg" style="padding: 0 20% 0 20%;">
-                        <form class="input-group">
-                            <input type="text" id="p1" class="form-control" placeholder="PP 1" maxlength="5" required="true">
-                            <input type="text" id="p2" class="form-control" placeholder="PP 2" maxlength="5" required="true"><br>
-                            <input type="text" id="p3" class="form-control" placeholder="PP 3" maxlength="5" required="true">
-                            <input type="text" id="p4" class="form-control" placeholder="PP 4" maxlength="5" required="true"><br>
-                            <input type="text" id="p5" class="form-control" placeholder="PP 5" maxlength="5" required="true">
-                            <input type="text" id="p6" class="form-control" placeholder="PP 6" maxlength="5" required="true"><br>
-                            <input type="text" id="p7" class="form-control" placeholder="PP 7" maxlength="5" required="true">
-                            <input type="text" id="p8" class="form-control" placeholder="PP 8" maxlength="5" required="true">
-                        </form>
-                    </div>
-                    <div class="col-2-lg"></div>
-                </div>
-            </div><hr>
-            <h1 id="head1" class="slideInLeft animated">Enter Your marks in Challenging Task</h1>
-            <div class="ct-container">
-                <div class="row">
-                    <div class="col-12-lg">
-                        <form action="" class="input-group">
-                            <input type="text" id="c1" class="form-control" placeholder="CT 1" maxlength="5" required="true"><br>
-                            <input type="text" id="c2" class="form-control" placeholder="CT 2" maxlength="5" required="true">
-                        </form>
-                    </div>
-                </div>
-            </div><hr>
-            <h1 id="head1">Enter Your marks in Inlab</h1>
-            <div class="inlab-container">
-                <div class="row">
-                    <div class="col-12-lg">
-                        <form action="" class="input-group">
-                            <input type="text" id="i1" class="form-control" placeholder="Inlab marks out of 100" maxlength="5" required="true">
-                        </form>
-                    </div>
-                </div>
+      </div>
+      <div class="col-sm-10 col-md-10 col-lg-10 card-container">
+        <div class="card card-outline-primary mb-3 ">
+          <div class="card-block card-block-outline-info" >
+            <h1 class="card-title slideInRight animated"><strong>Enter Your marks in Practice Problems</strong></h1>
+            <form class="input-group">
+                <input type="text" id="p1" class="form-control" placeholder="PP 1" maxlength="5" required="true">
+                <input type="text" id="p2" class="form-control" placeholder="PP 2" maxlength="5" required="true"><br>
+                <input type="text" id="p3" class="form-control" placeholder="PP 3" maxlength="5" required="true">
+                <input type="text" id="p4" class="form-control" placeholder="PP 4" maxlength="5" required="true"><br>
+                <input type="text" id="p5" class="form-control" placeholder="PP 5" maxlength="5" required="true">
+                <input type="text" id="p6" class="form-control" placeholder="PP 6" maxlength="5" required="true"><br>
+                <input type="text" id="p7" class="form-control" placeholder="PP 7" maxlength="5" required="true">
+                <input type="text" id="p8" class="form-control" placeholder="PP 8" maxlength="5" required="true">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-10 col-md-10 col-lg-10 card-container">
+        <div class="card card-outline-primary mb-3 ">
+          <div class="card-block card-block-outline-info" >
+            <h1 class="card-title slideInLeft animated"><strong>Enter Your marks in Challenging Tasks</strong></h1>
+            <form action="" class="input-group">
+                <input type="text" id="c1" class="form-control" placeholder="CT 1" maxlength="5" required="true"><br>
+                <input type="text" id="c2" class="form-control" placeholder="CT 2" maxlength="5" required="true">
+            </form>
+          </div>
+        </div>
+      </div>
+        <div class="col-sm-10 col-md-10 col-lg-10 card-container">
+            <div class="card card-outline-primary mb-10 ">
+              <div class="card-block card-block-outline-info" >
+                <h1 class="card-title slideInLeft animated"><strong>Enter Your marks in Inlabs</strong></h1>
+                <form action="" class="input-group">
+                    <input type="text" id="i1" class="form-control" placeholder="Inlab marks out of 100" maxlength="5" required="true">
+                </form>
+              </div>
             </div>
-            <hr><br>
-            </center>
         </div>
-        <div class="col-4-lg display-container">
-            <div class="grade-container">
-                <div class="row">
-                    <div class="col-12-lg grades" id="grade">
-                        <p id="grades" style="font-family: cursive;">Please fill the informations and come back. </p><br><br>
-                        <button class="gbtn btn btn-info" id="gbtn" disabled="disabled" >Get Grades</button>
-                        <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Check Another</button><br><br>
-                    <p style="color: red; font-family: cursive; padding:0 5% 0 7%;" class="msg hide" id="msg"><strong>Note :</strong> Your marks may improve if bonus practice problem marks is added.</p>
-                    </div>
-                </div>
-            </div><br><hr>
-        </div>
-        <footer class="footer"><center>
-            <p style="font-family: cursive;">Handcrafted in VIT,Vellore by <strong>Raj Chandra : </strong><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p></center>
-        </footer>
     </div>
+</div>
+<div class="col-sm-10 col-md-10 col-lg-10 card-container">
+    <div class="card card-outline-primary mb-3 ">
+      <div class="card-block card-block-outline-info" >
+        <p id="grades" style="font-family: cursive;">Please fill the informations and come back. </p><br><br>
+        <button class="gbtn btn btn-info" id="gbtn" disabled="disabled" >Get Grades</button>
+        <button class="button btn btn-success  animated hide" type="reset" id="reset" onClick="window.location.reload()">Check Another</button><br><br>
+        <p style="color: red; font-family: cursive;" class="msg hide" id="msg"><strong>Note :</strong> Your marks may improve if bonus practice problem marks is added.</p>
+      </div>
+    </div>
+</div>
+<div class="col-sm-10 col-md-10 col-lg-10 card-container">
+    <div class="card card-outline-primary mb-3 ">
+      <div class="card-block card-block-outline-info" >
+        <footer class="footer">
+        <p style="font-family: cursive;">Handcrafted in VIT,Vellore by <strong>Raj Chandra : </strong><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
+        </footer>
+      </div>
+    </div>
+</div>
+</div>
     <script>
         //Adds animation to the page
         // $('.form-control').on('change',function(){
