@@ -94,8 +94,8 @@
 
 </div>
     <script>
-    $('#hintbtn').('click',function (){
-        $('#hint').fadeToggle('slow');
+    // $('#hintbtn').('click',function (){
+    //     $('#hint').fadeToggle('slow');
         // $('.form-control').on('change',function(){
         //     // clicked='#' + this.id;
         //     document.getElementById(this.id).className='form-control hinge animated';NMlbCqo9
@@ -120,11 +120,19 @@
                     $(this).val('');
                 }
             }
-            if((marks>50 || marks<0) && this.id!=='i1'){
-                alert('Your marks should be between 0 and 50 !');
+            if((marks>250 || marks<0) && this.id==='a'){
+                alert('Your marks should be between 0 and 250 !');
                 $(this).val('');
             }
-            else if((marks>100 || marks<0) && this.id==='i1'){
+            else if((marks>400 || marks<0) && this.id==='p'){
+                alert('Your marks should be between 0 and 400 !');
+                $(this).val('');
+            }
+            else if((marks>100 || marks<0) && this.id==='c'){
+                alert('Your marks should be between 0 and 100 !');
+                $(this).val('');
+            }
+            else if((marks>100 || marks<0) && this.id==='i'){
                 alert('Your marks Should be between 0 and 100');
                 $(this).val('');
             }
