@@ -32,7 +32,7 @@
         }
         .card-container{
             background-color: #ffffff;
-            border:1px #FF7F00 solid;
+            border:1px #ccc solid; /*#FF7F00*/
             border-radius: 10px;
             padding : 5% 5% 5% 5%;
             margin-right: 2%;
@@ -57,11 +57,11 @@
     <div class="header-container">
          <header> CSE Grade Calculator</header>
     </div>
-    <div class="col-11-lg body-container">
-        <div class="col-sm-12 col-md-12 col-lg-12 card-container">
+    <div class="col-12-lg body-container">
+        <div class="col-sm-11 col-md-11 col-lg-11 card-container">
             <div class="card card-outline-primary mb-3 ">
               <div class="card-block card-block-outline-info" >
-                <h1 class="card-title slideInLeft animated"><strong>Enter Your Total marks</strong></h1>
+                <h1 class="card-title zoomIn animated"><strong>Enter Your Total marks</strong></h1>
                 <form class="input-group">
                     <input type="text" id="a" class="form-control" placeholder="Marks in Assessments" maxlength="6" required>
                     <input type="text" id="p" class="form-control" placeholder="Marks in Practice Problems" maxlength="6" required><br>
@@ -72,7 +72,7 @@
             </div>
         </div>
         </div>
-    <div class="col-sm-12 col-md-12 col-lg-12 card-container">
+    <div class="col-sm-11 col-md-11 col-lg-11 card-container">
         <div class="card card-outline-primary mb-3 ">
           <div class="card-block card-block-outline-info" >
             <p id="grades" style="font-family: cursive;">Please fill the informations and come back. </p><br><br>
@@ -82,17 +82,20 @@
           </div>
         </div>
     </div>
-    <div class="col-sm-12 col-md-12 col-lg-12 card-container">
+    <div class="col-sm-11 col-md-11 col-lg-11 card-container">
         <div class="card card-outline-primary mb-3 ">
           <div class="card-block card-block-outline-info" >
             <footer class="footer">
-            <p style="font-family: cursive;">Handcrafted in VIT,Vellore by <strong>Raj Chandra : </strong><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
+            <p style="font-family: 'Acme', sans-serif;">Handcrafted in VIT,Vellore by <strong>Raj Chandra : </strong><a href="https://www.facebook.com/raj.chandra.963"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/267px-F_icon.svg.png" width="30"></a></p>
             </footer>
           </div>
         </div>
     </div>
+
 </div>
     <script>
+    $('#hintbtn').('click',function (){
+        $('#hint').fadeToggle('slow');
         // $('.form-control').on('change',function(){
         //     // clicked='#' + this.id;
         //     document.getElementById(this.id).className='form-control hinge animated';NMlbCqo9
@@ -118,11 +121,11 @@
                 }
             }
             if((marks>50 || marks<0) && this.id!=='i1'){
-                alert('Your marks should b b/w 0 and 50 !');
+                alert('Your marks should be between 0 and 50 !');
                 $(this).val('');
             }
             else if((marks>100 || marks<0) && this.id==='i1'){
-                alert('Your marks Should b b/w 0 and 100');
+                alert('Your marks Should be between 0 and 100');
                 $(this).val('');
             }
         });
